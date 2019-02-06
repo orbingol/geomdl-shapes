@@ -4,6 +4,16 @@
 
 """
 
-__author__ = "Onur Rauf Bingol"
+# Module version
 __version__ = "1.0.0"
+
+# Author and license
+__author__ = "Onur Rauf Bingol"
 __license__ = "MIT"
+
+
+# Support for "from geomdl.shapes import *"
+__all__ = [
+    'curve2d',
+    'surface'
+]
