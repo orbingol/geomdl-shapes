@@ -21,4 +21,4 @@ Author
 License
 =======
 
-geomdl-shapes is licensed under the `MIT License <https://github.com/orbingol/geomdl-cli/blob/master/LICENSE>`_
+geomdl-shapes is licensed under the `MIT License <https://github.com/orbingol/geomdl-shapes/blob/master/LICENSE>`_
