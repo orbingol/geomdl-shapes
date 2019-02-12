@@ -1,10 +1,10 @@
 .idea/*
+.vscode/*
 build/
 dist/
-geomdl.cli.egg-info/*
+geomdl.shapes.egg-info/*
 docs/_build/*
 !docs/_build/.gitkeep
 docs/_static/*
 !docs/_static/.gitkeep
-.geomdl-cli/*
 *.pyc
