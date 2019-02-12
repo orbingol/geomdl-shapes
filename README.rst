@@ -1,6 +1,8 @@
 geomdl-shapes
 ^^^^^^^^^^^^^
 
+|PYPI|_
+
 **geomdl.shapes** module provides a set of shortcut functions to generate common shapes using
 `geomdl <https://pypi.org/project/geomdl>`_.
 
@@ -22,3 +24,7 @@ License
 =======
 
 geomdl-shapes is licensed under the `MIT License <https://github.com/orbingol/geomdl-shapes/blob/master/LICENSE>`_
+
+
+.. |PYPI| image:: https://img.shields.io/pypi/v/geomdl.shapes.svg
+.. _PYPI: https://pypi.org/project/geomdl.shapes/
