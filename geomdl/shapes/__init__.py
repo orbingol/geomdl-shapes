@@ -17,5 +17,6 @@ from geomdl.exceptions import GeomdlException
 # Support for "from geomdl.shapes import *"
 __all__ = [
     'curve2d',
-    'surface'
+    'surface',
+    'analytic'
 ]
