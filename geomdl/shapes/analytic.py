@@ -28,14 +28,14 @@ class Freeform(abstract.Geometry):
 
 
 class Circle(abstract.Geometry):
-    """ Analytic circle geometry
+    r""" Analytic circle geometry
 
     Finds the points on a circle using the following equation:
 
     .. math::
 
         x &= x_{0} + r \cos{\theta} \\
-        y &= y_{0} + r \sin{\phi} \\
+        y &= y_{0} + r \sin{\theta}
 
     Keyword Arguments:
         * ``radius``: radius of the circle. *Default: 1*
@@ -70,15 +70,15 @@ class Circle(abstract.Geometry):
 
 
 class Sphere(abstract.Geometry):
-    """ Analytic sphere geometry
+    r""" Analytic sphere geometry
 
     Finds the points on a sphere using the following equation:
 
     .. math::
 
         x &= x_{0} + r \sin{\phi} \cos{\theta} \\
-        y &= y_{0} + r \sin{\phi} \sin{\phi} \\
-        z &= z_{0} + r \cos{\phi} \\
+        y &= y_{0} + r \sin{\phi} \sin{\theta} \\
+        z &= z_{0} + r \cos{\phi}
     
     Keyword Arguments:
         * ``radius``: radius of the sphere. *Default: 1*
