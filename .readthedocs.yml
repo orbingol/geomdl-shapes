@@ -1,0 +1,15 @@
+# https://geomdl-shapes.readthedocs.io/en/latest/
+
+# Use RTD latest python image
+build:
+  image: latest
+
+# Build HTML and PDF docs
+formats:
+  - htmlzip
+  - pdf
+
+# Python options
+python:
+  version: 3.5
+  setup_py_install: false
