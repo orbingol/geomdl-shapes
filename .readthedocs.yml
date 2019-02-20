@@ -1,5 +1,8 @@
 # https://geomdl-shapes.readthedocs.io/en/latest/
 
+# Use RTD v2 configuration
+version: 2
+
 # Use RTD latest python image
 build:
   image: latest
@@ -11,5 +14,9 @@ formats:
 
 # Python options
 python:
-  version: 3.5
-  setup_py_install: false
+  version: 3
+  install:
+    - requirements: requirements.txt
+    - method: pip
+      path: .
+  system_packages: true
