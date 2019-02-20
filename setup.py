@@ -42,6 +42,7 @@ data = dict(
         'Programming Language :: Python :: 3.7'
     ],
     project_urls={
+        'Documentation': 'http://geomdl-shapes.readthedocs.io/',
         'Source': 'https://github.com/orbingol/geomdl-shapes',
         'Tracker': 'https://github.com/orbingol/geomdl-shapes/issues',
     },
