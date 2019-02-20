@@ -8,6 +8,7 @@
 """
 
 from geomdl import NURBS
+from . import GeomdlException
 
 
 # Generates a NURBS circle from 9 control points
@@ -20,7 +21,7 @@ def full_circle(radius=1):
     :rtype: NURBS.Curve
     """
     if radius <= 0:
-        raise ValueError("Curve radius cannot be less than and equal to zero")
+        raise GeomdlException("Curve radius cannot be less than and equal to zero")
 
     # Control points for a unit circle
     control_points = [[0.0, -1.0, 1.0], [-0.707, -0.707, 0.707], [-1.0, 0.0, 1.0],
@@ -57,7 +58,7 @@ def full_circle2(radius=1):
     :rtype: NURBS.Curve
     """
     if radius <= 0:
-        raise ValueError("Curve radius cannot be less than and equal to zero")
+        raise GeomdlException("Curve radius cannot be less than and equal to zero")
 
     # Control points for a unit circle
     control_points = [[1.0, 0.5, 1.0], [0.0, 1.0, 0.5], [-1.0, 0.5, 1.0],

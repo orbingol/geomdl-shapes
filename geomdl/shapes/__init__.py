@@ -11,6 +11,8 @@ __version__ = "1.0.0"
 __author__ = "Onur Rauf Bingol"
 __license__ = "MIT"
 
+# Common imports
+from geomdl.exceptions import GeomdlException
 
 # Support for "from geomdl.shapes import *"
 __all__ = [

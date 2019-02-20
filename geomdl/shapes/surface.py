@@ -8,6 +8,7 @@
 """
 
 from geomdl import NURBS
+from . import GeomdlException
 
 
 def cylinder(radius=1, height=1):
@@ -23,7 +24,7 @@ def cylinder(radius=1, height=1):
     :rtype: NURBS.Surface
     """
     if radius <= 0 or height <= 0:
-        raise ValueError("Radius and/or height cannot be less than and equal to zero")
+        raise GeomdlException("Radius and/or height cannot be less than and equal to zero")
 
     # Control points for a base cylinder
     control_points = [[[1.0, 0.0, 0.0, 1.0], [0.7071, 0.7071, 0.0, 0.7071], [0.0, 1.0, 0.0, 1.0],
