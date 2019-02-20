@@ -52,9 +52,6 @@ extensions = [
     'sphinx.ext.autosummary'
 ]
 
-# List of modules to be mocked up
-autodoc_mock_imports = ['geomdl.exceptions']
-
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
