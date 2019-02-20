@@ -1,7 +1,7 @@
 """
 .. module:: curve2d
     :platform: Unix, Windows
-    :synopsis: Provides common 2D curve shapes
+    :synopsis: Provides common 2D spline curves
 
 .. moduleauthor:: Onur Rauf Bingol <orbingol@gmail.com>
 
@@ -12,7 +12,7 @@ from geomdl import NURBS
 
 # Generates a NURBS circle from 9 control points
 def full_circle(radius=1):
-    """ Generates a NURBS full circle from 9 control points.
+    """ Generates a full NURBS circle from 9 control points.
 
     :param radius: radius of the circle
     :type radius: int, float
@@ -49,7 +49,7 @@ def full_circle(radius=1):
 
 # Generates a NURBS circle from 7 control points
 def full_circle2(radius=1):
-    """ Generates a NURBS full circle from 7 control points.
+    """ Generates a full NURBS circle from 7 control points.
 
     :param radius: radius of the circle
     :type radius: int, float

@@ -1,7 +1,7 @@
 """
 .. module:: surface
     :platform: Unix, Windows
-    :synopsis: Provides common surface shapes
+    :synopsis: Provides common spline surfaces
 
 .. moduleauthor:: Onur Rauf Bingol <orbingol@gmail.com>
 
@@ -11,7 +11,7 @@ from geomdl import NURBS
 
 
 def cylinder(radius=1, height=1):
-    """ Generates a NURBS cylindrical surface.
+    """ Generates a cylindrical NURBS surface.
 
     The cylindrical surface example is kindly contributed by John-Eric Dufour.
 
