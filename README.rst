@@ -13,7 +13,14 @@ Installing via `pip <https://pip.pypa.io/en/stable/>`_ is the easiest and the re
 
 .. code-block:: console
 
-    pip install geomdl.shapes
+    $ pip install geomdl.shapes
+
+If you are getting permission errors on Linux, you can use ``--user`` switch to install to current user's package
+directory.
+
+.. code-block:: console
+
+    $ pip install --user geomdl.shapes
 
 Author
 ======
