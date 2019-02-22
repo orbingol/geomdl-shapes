@@ -5,7 +5,7 @@
 """
 
 # Module version
-__version__ = "1.1.0"
+__version__ = "1.1.1"
 
 # Author and license
 __author__ = "Onur Rauf Bingol"
