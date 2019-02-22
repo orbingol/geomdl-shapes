@@ -1,4 +1,3 @@
-# setup.py script for geomdl.shapes
 from setuptools import setup
 import os
 import re

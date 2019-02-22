@@ -1,7 +1,7 @@
 """
 .. module:: curve2d
     :platform: Unix, Windows
-    :synopsis: Provides common 2D spline curves
+    :synopsis: Provides common 2D spline curve generator functions
 
 .. moduleauthor:: Onur Rauf Bingol <orbingol@gmail.com>
 

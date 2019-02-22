@@ -1,7 +1,7 @@
 """
 .. module:: analytic
     :platform: Unix, Windows
-    :synopsis: Provides common analytic geometries
+    :synopsis: Provides common analytic geometry classes
 
 .. moduleauthor:: Onur Rauf Bingol <orbingol@gmail.com>
 

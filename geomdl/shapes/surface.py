@@ -1,7 +1,7 @@
 """
 .. module:: surface
     :platform: Unix, Windows
-    :synopsis: Provides common spline surfaces
+    :synopsis: Provides common spline surface generator functions
 
 .. moduleauthor:: Onur Rauf Bingol <orbingol@gmail.com>
 
@@ -13,8 +13,6 @@ from . import GeomdlException
 
 def cylinder(radius=1, height=1):
     """ Generates a cylindrical NURBS surface.
-
-    The cylindrical surface example is kindly contributed by John-Eric Dufour.
 
     :param radius: radius of the cylinder
     :type radius: int, float
