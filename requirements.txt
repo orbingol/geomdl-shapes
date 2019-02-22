@@ -2,4 +2,4 @@
 # Python requirements for CI test runs and Docker image building
 
 # Minimum NURBS-Python (geomdl) version to use
-geomdl>=5.0b5
+geomdl>=5.0.0
