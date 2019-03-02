@@ -12,21 +12,6 @@ from geomdl import abstract
 from geomdl import linalg
 
 
-class Freeform(abstract.Geometry):
-    """ n-dimensional freeform geometry """
-    def __init__(self, **kwargs):
-        super(Freeform, self).__init__(**kwargs)
-        self.name = "Freeform geometry"
-
-    def evaluate(self, **kwargs):
-        """ Sets points that form the freeform geometry.
-
-        Keyword Arguments:
-            * ``points``: sets the points
-        """
-        self._eval_points = kwargs.get('points', self._init_array())
-
-
 class Circle(abstract.Geometry):
     r""" Analytic circle geometry
 
