@@ -10,6 +10,11 @@
 import math
 from geomdl import abstract
 from geomdl import linalg
+from geomdl import freeform
+
+
+# Keep this to maintain backwards compatibility
+Freeform = freeform.Freeform
 
 
 class Circle(abstract.Geometry):
