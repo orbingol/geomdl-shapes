@@ -139,6 +139,12 @@ class Rectangle(abstract.Geometry):
         self._b = kwargs.get('b', 1.0)
         self._origin = kwargs.get('origin', (0.0, 0.0))
 
+    def reverse(self):
+        """ Reverses the evaluated points """
+        if not self._eval_points:
+            self.evaluate()
+        self._eval_points = list(reversed(self._eval_points))
+
     def evaluate(self, **kwargs):
         r""" Evaluates the rectangle.
 
