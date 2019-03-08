@@ -113,3 +113,48 @@ class Sphere(abstract.Geometry):
                 ]
                 points.append(pt)
         self._eval_points = points
+
+
+class Rectangle(abstract.Geometry):
+    r""" Analytic rectangle geometry
+
+    Finds the points on a rectangle with the size of :math:`2p \times 2q` using the following equation:
+
+    .. math::
+
+        x &= a (\lvert \cos{\theta} \rvert \cos{\theta} + \lvert \sin{\theta} \rvert \sin{\theta}) \\
+        y &= b (\lvert \cos{\theta} \rvert \cos{\theta} - \lvert \sin{\theta} \rvert \sin{\theta})
+
+    Keyword Arguments:
+        * ``a``: length of the side on the u-direction. *Default: 1*
+        * ``b``: length of the side on the v-direction. *Default: 1*
+        * ``origin``: coordinates of the rectangle center. *Default: (0, 0)*
+    """
+    def __init__(self, **kwargs):
+        super(Rectangle, self).__init__(**kwargs)
+        self.name = "analytic rectangle"
+        self._a = kwargs.get('a', 1.0)
+        self._b = kwargs.get('b', 1.0)
+        self._origin = kwargs.get('origin', (0.0, 0.0))
+
+    def evaluate(self, **kwargs):
+        r""" Evaluates the rectangle.
+
+        Keyword Arguments:
+            * ``start``: start angle :math:`\theta` in degrees. *Default: 0*
+            * ``stop``: stop angle :math:`\theta` in degrees. *Default: 360*
+            * ``jump``: angle :math:`\theta` increment in degrees. *Default: 1*
+        """
+        start = kwargs.get('start', 0.0)
+        stop = kwargs.get('stop', 360.0)
+        jump = kwargs.get('jump', 1.0)
+        points = []
+        for t in linalg.frange(start, stop, jump):
+            ct = math.cos(math.radians(t))
+            st = math.sin(math.radians(t))
+            pt = [
+                self._origin[0] + self._a * ((abs(ct) * ct) + (abs(st) * st)),
+                self._origin[1] + self._b * ((abs(ct) * ct) - (abs(st) * st)),
+            ]
+            points.append(pt)
+        self._eval_points = points
