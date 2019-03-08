@@ -33,17 +33,21 @@ class Circle(abstract.Geometry):
     """
     def __init__(self, **kwargs):
         super(Circle, self).__init__(**kwargs)
-        self.name = "Analytic circle"
+        self.name = "analytic circle"
         self._radius = kwargs.get('radius', 1.0)
         self._origin = kwargs.get('origin', (0.0, 0.0))
 
+    def reverse(self):
+        """ Reverses the evaluated points """
+        self._eval_points = reversed(self._eval_points)
+
     def evaluate(self, **kwargs):
-        """ Evaluates the circle.
+        r""" Evaluates the circle.
         
         Keyword Arguments:
-            * ``start``: start angle :math:`\\theta` in degrees. *Default: 0*
-            * ``stop``: stop angle :math:`\\theta` in degrees. *Default: 360*
-            * ``jump``: angle :math:`\\theta` increment in degrees. *Default: 1*
+            * ``start``: start angle :math:`\theta` in degrees. *Default: 0*
+            * ``stop``: stop angle :math:`\theta` in degrees. *Default: 360*
+            * ``jump``: angle :math:`\theta` increment in degrees. *Default: 1*
         """
         start = kwargs.get('start', 0.0)
         stop = kwargs.get('stop', 360.0)
@@ -76,20 +80,20 @@ class Sphere(abstract.Geometry):
     """
     def __init__(self, **kwargs):
         super(Sphere, self).__init__(**kwargs)
-        self.name = "Analytic sphere"
+        self.name = "analytic sphere"
         self._radius = kwargs.get('radius', 1.0)
         self._origin = kwargs.get('origin', (0.0, 0.0, 0.0))
 
     def evaluate(self, **kwargs):
-        """ Evaluates the sphere.
+        r""" Evaluates the sphere.
         
         Keyword Arguments:
-            * ``start_theta``: start angle :math:`\\theta` in degrees. *Default: 0*
-            * ``stop_theta``: stop angle :math:`\\theta` in degrees. *Default: 360*
-            * ``jump_theta``: angle :math:`\\theta` increment in degrees. *Default: 1*
-            * ``start_phi``: start angle :math:`\\phi` in degrees. *Default: 0*
-            * ``stop_phi``: stop angle :math:`\\phi` in degrees. *Default: 180*
-            * ``jump_phi``: angle :math:`\\phi` increment in degrees. *Default: 1* 
+            * ``start_theta``: start angle :math:`\theta` in degrees. *Default: 0*
+            * ``stop_theta``: stop angle :math:`\theta` in degrees. *Default: 360*
+            * ``jump_theta``: angle :math:`\theta` increment in degrees. *Default: 1*
+            * ``start_phi``: start angle :math:`\phi` in degrees. *Default: 0*
+            * ``stop_phi``: stop angle :math:`\phi` in degrees. *Default: 180*
+            * ``jump_phi``: angle :math:`\phi` increment in degrees. *Default: 1*
         """
         start_theta = kwargs.get('start_theta', 0.0)
         stop_theta = kwargs.get('stop_theta', 360.0)
