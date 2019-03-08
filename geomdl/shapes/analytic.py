@@ -39,7 +39,9 @@ class Circle(abstract.Geometry):
 
     def reverse(self):
         """ Reverses the evaluated points """
-        self._eval_points = reversed(self._eval_points)
+        if not self._eval_points:
+            self.evaluate()
+        self._eval_points = list(reversed(self._eval_points))
 
     def evaluate(self, **kwargs):
         r""" Evaluates the circle.
