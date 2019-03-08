@@ -33,6 +33,7 @@ class Circle(abstract.Geometry):
     """
     def __init__(self, **kwargs):
         super(Circle, self).__init__(**kwargs)
+        self._dimension = 2
         self.name = "analytic circle"
         self._radius = kwargs.get('radius', 1.0)
         self._origin = kwargs.get('origin', (0.0, 0.0))
@@ -82,6 +83,7 @@ class Sphere(abstract.Geometry):
     """
     def __init__(self, **kwargs):
         super(Sphere, self).__init__(**kwargs)
+        self._dimension = 3
         self.name = "analytic sphere"
         self._radius = kwargs.get('radius', 1.0)
         self._origin = kwargs.get('origin', (0.0, 0.0, 0.0))
@@ -134,6 +136,7 @@ class Rectangle(abstract.Geometry):
     """
     def __init__(self, **kwargs):
         super(Rectangle, self).__init__(**kwargs)
+        self._dimension = 2
         self.name = "analytic rectangle"
         self._a = kwargs.get('a', 1.0)
         self._b = kwargs.get('b', 1.0)
