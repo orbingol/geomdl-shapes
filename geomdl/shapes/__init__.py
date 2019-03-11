@@ -30,6 +30,7 @@ __author__ = "Onur Rauf Bingol"
 __license__ = "MIT"
 
 # Common imports
+from geomdl import shortcuts
 from geomdl.exceptions import GeomdlException
 
 # Support for "from geomdl.shapes import *"

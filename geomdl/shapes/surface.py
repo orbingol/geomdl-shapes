@@ -7,7 +7,7 @@
 
 """
 
-from geomdl import NURBS
+from . import shortcuts
 from . import GeomdlException
 
 
@@ -56,7 +56,7 @@ def cylinder(radius=1, height=1):
         ctrlpts = control_points
 
     # Generate the surface
-    surface = NURBS.Surface()
+    surface = shortcuts.generate_nurbs_surface()
     surface.degree_u = 1
     surface.degree_v = 2
     surface.ctrlpts2d = ctrlpts

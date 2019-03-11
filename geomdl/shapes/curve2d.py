@@ -7,7 +7,7 @@
 
 """
 
-from geomdl import NURBS
+from . import shortcuts
 from . import GeomdlException
 
 
@@ -39,7 +39,7 @@ def full_circle(radius=1):
         ctrlpts = control_points
 
     # Generate the curve
-    curve = NURBS.Curve()
+    curve = shortcuts.generate_nurbs_curve()
     curve.degree = 2
     curve.ctrlptsw = ctrlpts
     curve.knotvector = [0, 0, 0, 0.25, 0.25, 0.5, 0.5, 0.75, 0.75, 1, 1, 1]
@@ -76,7 +76,7 @@ def full_circle2(radius=1):
         ctrlpts = control_points
 
     # Generate the curve
-    curve = NURBS.Curve()
+    curve = shortcuts.generate_nurbs_curve()
     curve.degree = 2
     curve.ctrlptsw = ctrlpts
     curve.knotvector = [0, 0, 0, 0.33, 0.33, 0.66, 0.66, 1, 1, 1]
