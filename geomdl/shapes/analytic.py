@@ -7,17 +7,32 @@
 
 """
 
+import abc
 import math
 from geomdl import abstract
 from geomdl import linalg
 from geomdl import freeform
+from geomdl import _utilities as utl
 
 
 # Keep this to maintain backwards compatibility
 Freeform = freeform.Freeform
 
 
-class Circle(abstract.Geometry):
+@utl.add_metaclass(abc.ABCMeta)
+class AnalyticGeometry(abstract.Geometry):
+    """ Abstract base class for analytic-type geometry classes """
+    def __init__(self, **kwargs):
+        super(AnalyticGeometry, self).__init__(**kwargs)
+        self._geometry_type = "analytic"
+
+    @abc.abstractmethod
+    def evaluate(self, **kwargs):
+        pass
+
+
+@utl.export
+class Circle(AnalyticGeometry):
     r""" Analytic circle geometry
 
     Finds the points on a circle using the following equation:
@@ -66,7 +81,8 @@ class Circle(abstract.Geometry):
         self._eval_points = points
 
 
-class Sphere(abstract.Geometry):
+@utl.export
+class Sphere(AnalyticGeometry):
     r""" Analytic sphere geometry
 
     Finds the points on a sphere using the following equation:
@@ -119,7 +135,8 @@ class Sphere(abstract.Geometry):
         self._eval_points = points
 
 
-class Rectangle(abstract.Geometry):
+@utl.export
+class Rectangle(AnalyticGeometry):
     r""" Analytic rectangle geometry
 
     Finds the points on a rectangle with the size of :math:`2p \times 2q` using the following equation:
