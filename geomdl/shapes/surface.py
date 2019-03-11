@@ -57,6 +57,7 @@ def cylinder(radius=1, height=1):
 
     # Generate the surface
     surface = shortcuts.generate_nurbs_surface()
+    surface.name = "cylindrical surface"
     surface.degree_u = 1
     surface.degree_v = 2
     surface.ctrlpts2d = ctrlpts

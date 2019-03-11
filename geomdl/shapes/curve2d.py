@@ -40,6 +40,7 @@ def full_circle(radius=1):
 
     # Generate the curve
     curve = shortcuts.generate_nurbs_curve()
+    curve.name = "circle from 9 control points"
     curve.degree = 2
     curve.ctrlptsw = ctrlpts
     curve.knotvector = [0, 0, 0, 0.25, 0.25, 0.5, 0.5, 0.75, 0.75, 1, 1, 1]
@@ -77,6 +78,7 @@ def full_circle2(radius=1):
 
     # Generate the curve
     curve = shortcuts.generate_nurbs_curve()
+    curve.name = "circle from 7 control points"
     curve.degree = 2
     curve.ctrlptsw = ctrlpts
     curve.knotvector = [0, 0, 0, 0.33, 0.33, 0.66, 0.66, 1, 1, 1]
