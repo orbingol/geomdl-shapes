@@ -65,11 +65,11 @@ class Circle(AnalyticGeometry):
         Keyword Arguments:
             * ``start``: start angle :math:`\theta` in degrees. *Default: 0*
             * ``stop``: stop angle :math:`\theta` in degrees. *Default: 360*
-            * ``jump``: angle :math:`\theta` increment in degrees. *Default: 1*
+            * ``jump``: angle :math:`\theta` increment in degrees. *Default: 0.5*
         """
         start = kwargs.get('start', 0.0)
         stop = kwargs.get('stop', 360.0)
-        jump = kwargs.get('jump', 1.0)
+        jump = kwargs.get('jump', 0.5)
         points = []
         for t in linalg.frange(start, stop, jump):
             t_r = math.radians(t)
@@ -110,17 +110,17 @@ class Sphere(AnalyticGeometry):
         Keyword Arguments:
             * ``start_theta``: start angle :math:`\theta` in degrees. *Default: 0*
             * ``stop_theta``: stop angle :math:`\theta` in degrees. *Default: 360*
-            * ``jump_theta``: angle :math:`\theta` increment in degrees. *Default: 1*
+            * ``jump_theta``: angle :math:`\theta` increment in degrees. *Default: 0.5*
             * ``start_phi``: start angle :math:`\phi` in degrees. *Default: 0*
             * ``stop_phi``: stop angle :math:`\phi` in degrees. *Default: 180*
-            * ``jump_phi``: angle :math:`\phi` increment in degrees. *Default: 1*
+            * ``jump_phi``: angle :math:`\phi` increment in degrees. *Default: 0.25*
         """
         start_theta = kwargs.get('start_theta', 0.0)
         stop_theta = kwargs.get('stop_theta', 360.0)
-        jump_theta = kwargs.get('jump_theta', 1.0)
+        jump_theta = kwargs.get('jump_theta', 0.5)
         start_phi = kwargs.get('start_phi', 0.0)
         stop_phi = kwargs.get('stop_phi', 180.0)
-        jump_phi = kwargs.get('jump_phi', 1.0)
+        jump_phi = kwargs.get('jump_phi', 0.25)
         points = []
         for tt in linalg.frange(start_theta, stop_theta, jump_theta):
             tt_rad = math.radians(tt)
@@ -171,11 +171,11 @@ class Rectangle(AnalyticGeometry):
         Keyword Arguments:
             * ``start``: start angle :math:`\theta` in degrees. *Default: 0*
             * ``stop``: stop angle :math:`\theta` in degrees. *Default: 360*
-            * ``jump``: angle :math:`\theta` increment in degrees. *Default: 1*
+            * ``jump``: angle :math:`\theta` increment in degrees. *Default: 0.5*
         """
         start = kwargs.get('start', 0.0)
         stop = kwargs.get('stop', 360.0)
-        jump = kwargs.get('jump', 1.0)
+        jump = kwargs.get('jump', 0.5)
         points = []
         for t in linalg.frange(start, stop, jump):
             ct = math.cos(math.radians(t))
