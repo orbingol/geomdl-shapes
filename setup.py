@@ -24,7 +24,7 @@ data = dict(
     url='https://github.com/orbingol/geomdl-shapes',
     keywords='NURBS B-Spline curve surface volume CAD modeling visualization',
     packages=['geomdl.shapes'],
-    install_requires=['geomdl>=5.0.0'],
+    install_requires=['geomdl>=5.2.0'],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Science/Research',
