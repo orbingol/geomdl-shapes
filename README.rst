@@ -3,20 +3,13 @@ geomdl-shapes
 
 |RTD|_ |PYPI|_ |PYPIDL|_
 
-**geomdl.shapes** module provides a set of shortcut functions to generate common shapes using
+**geomdl.shapes** module provides a set of shortcut functions to generate common spline and analytic shapes using
 `geomdl <https://pypi.org/project/geomdl>`_.
 
 Installation
 ============
 
 Installing via `pip <https://pip.pypa.io/en/stable/>`_ is the easiest and the recommended method:
-
-.. code-block:: console
-
-    $ pip install geomdl.shapes
-
-If you are getting permission errors on Linux, you can use ``--user`` switch to install to current user's package
-directory.
 
 .. code-block:: console
 
