@@ -21,3 +21,8 @@ Function Reference
     :members:
     :inherited-members:
     :show-inheritance:
+
+.. automodule:: geomdl.shapes.volume
+    :members:
+    :inherited-members:
+    :show-inheritance:
