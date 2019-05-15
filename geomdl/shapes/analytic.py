@@ -28,6 +28,12 @@ class AnalyticGeometry(abstract.Geometry):
 
     @abc.abstractmethod
     def evaluate(self, **kwargs):
+        """ Evaluates/computes the points that form the geometry.
+
+        .. note::
+
+            This is an abstract method and it must be implemented in the subclass.
+        """
         pass
 
 
