@@ -26,6 +26,18 @@ class AnalyticGeometry(abstract.Geometry):
         super(AnalyticGeometry, self).__init__(**kwargs)
         self._geometry_type = "analytic"
 
+    @property
+    def data(self):
+        """ Returns a dict which contains the geometry data.
+
+        Please refer to the `wiki <https://github.com/orbingol/NURBS-Python/wiki/Using-Python-Properties>`_ for details
+        on using this class member.
+        """
+        return dict(
+            type=self.type,
+            points=self.evalpts
+        )
+
     @abc.abstractmethod
     def evaluate(self, **kwargs):
         """ Evaluates/computes the points that form the geometry.
@@ -67,7 +79,7 @@ class Circle(AnalyticGeometry):
 
     def evaluate(self, **kwargs):
         r""" Evaluates the circle.
-        
+
         Keyword Arguments:
             * ``start``: start angle :math:`\theta` in degrees. *Default: 0*
             * ``stop``: stop angle :math:`\theta` in degrees. *Default: 360*
@@ -80,7 +92,7 @@ class Circle(AnalyticGeometry):
         for t in linalg.frange(start, stop, jump):
             t_r = math.radians(t)
             pt = [
-                self._origin[0] + (self._radius * math.cos(t_r)), 
+                self._origin[0] + (self._radius * math.cos(t_r)),
                 self._origin[1] + (self._radius * math.sin(t_r))
             ]
             points.append(pt)
@@ -98,7 +110,7 @@ class Sphere(AnalyticGeometry):
         x &= x_{0} + r \sin{\phi} \cos{\theta} \\
         y &= y_{0} + r \sin{\phi} \sin{\theta} \\
         z &= z_{0} + r \cos{\phi}
-    
+
     Keyword Arguments:
         * ``radius``: radius of the sphere. *Default: 1*
         * ``origin``: coordinates of the sphere center. *Default: (0, 0, 0)*
@@ -112,7 +124,7 @@ class Sphere(AnalyticGeometry):
 
     def evaluate(self, **kwargs):
         r""" Evaluates the sphere.
-        
+
         Keyword Arguments:
             * ``start_theta``: start angle :math:`\theta` in degrees. *Default: 0*
             * ``stop_theta``: stop angle :math:`\theta` in degrees. *Default: 360*
@@ -133,7 +145,7 @@ class Sphere(AnalyticGeometry):
             for tp in linalg.frange(start_phi, stop_phi, jump_phi):
                 tp_rad = math.radians(tp)
                 pt = [
-                    self._origin[0] + (self._radius * math.sin(tp_rad) * math.cos(tt_rad)), 
+                    self._origin[0] + (self._radius * math.sin(tp_rad) * math.cos(tt_rad)),
                     self._origin[1] + (self._radius * math.sin(tp_rad) * math.sin(tt_rad)),
                     self._origin[2] + (self._radius * math.cos(tp_rad))
                 ]
