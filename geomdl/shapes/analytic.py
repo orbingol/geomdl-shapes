@@ -12,14 +12,14 @@ import math
 from geomdl import abstract
 from geomdl import linalg
 from geomdl import freeform
-from geomdl import _utilities as utl
+from geomdl._utilities import add_metaclass, export
 
 
 # Keep this to maintain backwards compatibility
 Freeform = freeform.Freeform
 
 
-@utl.add_metaclass(abc.ABCMeta)
+@add_metaclass(abc.ABCMeta)
 class AnalyticGeometry(abstract.Geometry):
     """ Abstract base class for analytic-type geometry classes """
     def __init__(self, **kwargs):
@@ -31,7 +31,7 @@ class AnalyticGeometry(abstract.Geometry):
         pass
 
 
-@utl.export
+@export
 class Circle(AnalyticGeometry):
     r""" Analytic circle geometry
 
@@ -81,7 +81,7 @@ class Circle(AnalyticGeometry):
         self._eval_points = points
 
 
-@utl.export
+@export
 class Sphere(AnalyticGeometry):
     r""" Analytic sphere geometry
 
@@ -135,7 +135,7 @@ class Sphere(AnalyticGeometry):
         self._eval_points = points
 
 
-@utl.export
+@export
 class Rectangle(AnalyticGeometry):
     r""" Analytic rectangle geometry
 
