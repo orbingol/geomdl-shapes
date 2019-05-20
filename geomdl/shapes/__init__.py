@@ -19,7 +19,7 @@
 # SOFTWARE.
 
 # Module version
-__version__ = "1.2.0"
+__version__ = "1.3.0"
 
 # Author and license
 __author__ = "Onur Rauf Bingol"
