@@ -7,8 +7,8 @@ The recommended method for installation is using `pip <https://pypi.org/project/
 
     $ pip install --user geomdl.shapes
 
-Alternatively, you can install the latest development version from the GitHub repository:
+Alternatively, you can install the latest version from the GitHub repository:
 
 * Clone the repository: ``git clone https://github.com/orbingol/geomdl-shapes.git``
-* Inside the directory containing the cloned repository, run: ``pip install .``
+* Inside the directory containing the cloned repository, run: ``pip install --user .``
 * The setup script will install all required dependencies
