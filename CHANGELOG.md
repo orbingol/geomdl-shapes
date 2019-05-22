@@ -1,5 +1,11 @@
 # geomdl-shapes Changelog
 
+## v1.3.0 released on 2019-05-20
+
+* Added *Scordelis-Lo Roof* generator
+* Base module compatibility updates
+* Documentation updates
+
 ## v1.2.0 released on 2019-02-22
 
 * Add `Rectangle` class
