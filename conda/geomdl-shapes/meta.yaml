@@ -1,0 +1,37 @@
+# conda-build recipe for geomdl-shapes package
+{% set setup_data = load_setup_py_data() %}
+{% set build_number = 0 %}
+
+package:
+  name: geomdl.shapes
+  version: {{ setup_data['version'] }}
+
+source:
+  path: ../../
+
+build:
+  noarch: python
+  number: {{ build_number }}
+  script:
+    - python setup.py sdist
+    - pip install dist/geomdl.shapes-{{ setup_data['version'] }}.tar.gz --no-deps
+
+requirements:
+  host:
+    - python
+    - setuptools
+  run:
+    - python
+
+about:
+  home: https://onurraufbingol.com/NURBS-Python/
+  license: MIT
+  license_family: MIT
+  summary: Generate common B-spline, NURBS and analytic geometries with geomdl
+  description: Generate common B-spline, NURBS and analytic geometries with geomdl
+  doc_url: https://nurbs-python.readthedocs.io/projects/shapes/
+  dev_url: https://github.com/orbingol/geomdl-shapes
+
+extra:
+  recipe-maintainers:
+    - orbingol
