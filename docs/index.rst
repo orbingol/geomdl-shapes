@@ -9,3 +9,4 @@ geomdl-shapes Documentation
 
     install
     api
+    surfgen
